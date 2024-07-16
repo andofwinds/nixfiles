@@ -23,6 +23,8 @@ programs.home-manager.enable = true;
       ghex
       arduino-ide
       gnome-tweaks
+			qemu
+			python3
     ];
   };
 }

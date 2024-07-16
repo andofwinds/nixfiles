@@ -11,7 +11,10 @@ in {
 		enable = true;
 
 		settings = {
-			monitor = "eDP-1, 1920x1080@60, 0x0, 1";
+			monitor = [
+				"eDP-1, 1920x1080@60, 0x1080, 1"
+				",  1920x1080@60, 0x0, 1"
+			];
 
 			general = {
 				gaps_in = 3;
