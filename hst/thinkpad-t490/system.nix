@@ -16,4 +16,10 @@
   ];
 
   networking.hostName = "t490";
+
+	networking.wireless.networks = {
+		"HUAWEI nova 11i" = {
+			psk = "ivai3866";
+		};
+	};
 }
