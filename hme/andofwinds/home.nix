@@ -11,20 +11,28 @@ programs.home-manager.enable = true;
 
     packages = with pkgs; [
       inputs.neowind.packages."${pkgs.system}".default
-#			create-react-app
-			kitty
-#			telegram-desktop
-#      			nodejs
-#      			rustup
-#			vlc
+			create-react-app
+			telegram-desktop
+     	nodejs
+      rustup
+			vlc
  			cava
-#			flatpak
+			flatpak
 			fastfetch
 			ghex
 			arduino-ide
-#			gnome-tweaks
-#			qemu
-#			python3
+			gnome-tweaks
+			python3
+			wl-clipboard
     ];
   };
+
+	programs.kitty = {
+		enable = true;
+		font = {
+			package = pkgs.nerdfonts;
+			name = "JetBrainsMono Nerd Font";
+			size = 11;
+		};
+	};
 }
