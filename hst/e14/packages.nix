@@ -7,25 +7,26 @@
 		with pkgs;
 		[
 			brightnessctl
-      wget
-      git
-      gcc
-      zsh-autocomplete
-      zsh-autosuggestions
-      pkg-config
-      nasm
-      xorg.libX11
-      adwaita-icon-theme
-      zoxide
-      openssl
-      home-manager
+			wget
+			git
+			gcc
+			zsh-autocomplete
+			zsh-autosuggestions
+			pkg-config
+			nasm
+			xorg.libX11
+			adwaita-icon-theme
+			zoxide
+			openssl
+			home-manager
 			gtk3.dev
 			cmake
 			gnumake
+			neofetch
 		];
-    programs.firefox.enable = true;
+		programs.firefox.enable = true;
 		programs.hyprland.enable = true;
-    fonts.packages = [
-      pkgs.nerdfonts
-    ];
+		fonts.packages = [
+			pkgs.nerdfonts
+		];
 }

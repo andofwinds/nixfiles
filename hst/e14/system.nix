@@ -1,8 +1,8 @@
-{ ... }:
+{ lib, ... }:
 {
 	imports = [
 		../../bse/sys.nix
-		# TODO hdw.nix
+		./hdw.nix
 
 		../../mod/networking.nix
 		../../mod/bluetooth.nix
@@ -14,4 +14,5 @@
 	];
 
 	networking.hostName = "e14";
+	system.stateVersion = "24.05";
 }
