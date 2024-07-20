@@ -8,7 +8,14 @@
   time.timeZone = "Europe/Moscow";
 
   boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
+		grub = {
+			enable = true;
+			efiSupport = true;
+			device = "nodev";
+		};
+    efi = {
+			canTouchEfiVariables = true;
+			efiSysMountPoint = "/boot/efi";
+		};
   };
 }

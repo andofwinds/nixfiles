@@ -8,10 +8,9 @@
 		../../mod/bluetooth.nix
 		../../mod/user.nix
 		../../mod/audio.nix
-		../../mod/zsh.nix
 
 		./packages.nix
 	];
 
-	networking.hostName = "think";
+	networking.hostName = "thinkpad";
 }

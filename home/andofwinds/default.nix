@@ -1,8 +1,10 @@
 { pkgs, inputs, ... }:
-{
+let
+	base16 = import ./base16.nix;
+in {
 programs.home-manager.enable = true;
   imports = [
-		./pak/hyprland.nix
+		(import ./configs { base16 = base16; })
   ];
   home = {
     username = "andofwinds";
@@ -25,16 +27,8 @@ programs.home-manager.enable = true;
 			wl-clipboard
 			unzip
 			swww
+			grim
 			fastfetch
     ];
   };
-
-	programs.kitty = {
-		enable = true;
-		font = {
-			package = pkgs.nerdfonts;
-			name = "JetBrainsMono Nerd Font";
-			size = 11;
-		};
-	};
 }

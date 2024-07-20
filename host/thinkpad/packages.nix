@@ -23,6 +23,7 @@
 			cmake
 			gnumake
 			neofetch
+			alsa-utils
 		];
 		programs.firefox.enable = true;
 		programs.hyprland.enable = true;

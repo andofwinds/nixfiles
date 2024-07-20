@@ -1,6 +1,6 @@
-{ ... }:
+{ base16, ... }:
 let
-	terminal = "kitty";
+	terminal = "alacritty";
 	explorer = "nautilus";
 	browser  = "firefox";
 	audioStep = "2";
@@ -16,16 +16,19 @@ in {
 				",  1920x1080@60, 0x0, 1"
 			];
 
+			exec-once = "${./swww_run.sh}";
+
 			general = {
 				gaps_in = 3;
 				gaps_out = 30;
-				layout = "dwindle";
+				layout = "master";
 				allow_tearing = "false";
-				border_size = 1;
+				border_size = 0;
+
 			};
 
 			decoration = {
-				rounding = 3;
+				rounding = 2;
 
 				blur = {
 					enabled = true;
@@ -33,7 +36,7 @@ in {
 					passes = 2;
 				};
 
-				active_opacity = 0.95;
+				active_opacity = 0.96;
 				inactive_opacity = 0.85;
 			};
 
@@ -43,10 +46,10 @@ in {
 				bezier = "dbez, 0.02, 0.91, 0.26, 0.98";
 
 				animation = [
-					"windows,    1, 5, dbez, slide top"
-					"windowsOut, 1, 5, dbez, slide bottom"
-					"border,     1, 8, default"
-					"workspaces, 1, 4, dbez"
+					"windows,    1, 2, dbez, slide top"
+					"windowsOut, 1, 2, dbez, slide bottom"
+					"border,     1, 2, default"
+					"workspaces, 1, 2, dbez"
 				];
 			};
 
@@ -65,10 +68,10 @@ in {
 			"$mod" = "SUPER";
 			bind = [
 				"$mod, Q, exec, ${terminal}"
-				"$mod, C, killactive"
-				"$mod, M, exit"
 				"$mod, E, exec, ${explorer}"
 				"$mod, B, exec, ${browser}"
+				"$mod, M, exit"
+				"$mod, C, killactive"
 
 				"$mod, D, pseudo"
 				"$mod, F, togglefloating"
