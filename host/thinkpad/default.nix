@@ -14,5 +14,4 @@
 	];
 
 	networking.hostName = "think";
-	system.stateVersion = "24.05";
 }

@@ -22,15 +22,15 @@
 				# a unique config for my Thinkpads
 				thinkpad = lib.nixosSystem { inherit system;
 					modules = [
-						./host/thinkpad/system.nix
+						./host/thinkpad
 					];
 				};
 				
 				# RX580-based PcBuild
 				rx580 = lib.nixosSystem { inherit system;
 					modules = [
-						./host/rx580/system.nix
-					];
+						./host/rx580
+						];
 				};
       };
 
@@ -39,8 +39,8 @@
           inherit pkgs;
           extraSpecialArgs = { inherit inputs; };
           modules = [
-						./home/andofwinds/home.nix
-          ];
+						./home/andofwinds
+						];
         };
       };
     };
