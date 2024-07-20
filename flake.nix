@@ -19,24 +19,17 @@
       pkgs = import nixpkgs { inherit system; };
     in {
       nixosConfigurations = {
-        # Thinkpad T490
-        t490 = lib.nixosSystem { inherit system;
-          modules = [
-            ./hst/thinkpad-t490/system.nix
-          ];
-        };
-
-				# Thinkpad E14 G2
-				e14 = lib.nixosSystem { inherit system;
+				# a unique config for my Thinkpads
+				thinkpad = lib.nixosSystem { inherit system;
 					modules = [
-						./hst/e14/system.nix
+						./host/thinkpad/system.nix
 					];
 				};
 				
 				# RX580-based PcBuild
 				rx580 = lib.nixosSystem { inherit system;
 					modules = [
-						./hst/rx580/system.nix
+						./host/rx580/system.nix
 					];
 				};
       };
@@ -46,7 +39,7 @@
           inherit pkgs;
           extraSpecialArgs = { inherit inputs; };
           modules = [
-						./hme/andofwinds/home.nix
+						./home/andofwinds/home.nix
           ];
         };
       };

@@ -2,7 +2,7 @@
 {
 programs.home-manager.enable = true;
   imports = [
-		./homepak/hyprland.nix
+		./pak/hyprland.nix
   ];
   home = {
     username = "andofwinds";
@@ -18,12 +18,14 @@ programs.home-manager.enable = true;
 			vlc
  			cava
 			flatpak
-			fastfetch
 			ghex
 			arduino-ide
 			gnome-tweaks
 			python3
 			wl-clipboard
+			unzip
+			swww
+			fastfetch
     ];
   };
 

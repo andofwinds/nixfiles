@@ -1,7 +1,7 @@
-{ lib, ... }:
+{ ... }:
 {
 	imports = [
-		../../bse/sys.nix
+		../../base/system.nix
 		./hdw.nix
 
 		../../mod/networking.nix
@@ -13,6 +13,6 @@
 		./packages.nix
 	];
 
-	networking.hostName = "e14";
+	networking.hostName = "think";
 	system.stateVersion = "24.05";
 }

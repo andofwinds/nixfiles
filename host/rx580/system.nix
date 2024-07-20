@@ -1,8 +1,9 @@
 { ... }:
 {
 	imports = [
-		../../bse/sys.nix
+		../../base/system.nix
 		./hdw.nix
+
 		../../mod/xgnome.nix
 		../../mod/networking.nix
 		../../mod/user.nix

@@ -1,31 +1,34 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 {
   boot = {
     initrd = {
       availableKernelModules = [
         "xhci_pci"
-        "nvme"
-        "usb_storage"
-        "sd_mod"
+	"thunderbolt"
+	"nvme"
+	"usb_storage"
+	"sd_mod"
         "rtsx_pci_sdmmc"
       ];
       kernelModules = [ ];
     };
-    kernelModules = [ "kvm-intel" ];
-    extraModulePackages = [ ];
+    kernelPackages = pkgs.linuxPackages_latest;
+    plymouth.enable = true;
   };
+
   fileSystems = {
     "/boot" = {
-      device = "/dev/disk/by-uuid/6A3B-2638";
+      device = "/dev/disk/by-uuid/D2A9-FA1F";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
-
     "/" = {
-      device = "/dev/disk/by-uuid/ae3de381-f3e8-440b-91ca-ab40dc7e33f5";
+      device = "/dev/disk/by-uuid/f46a3e3a-8d29-48f9-98e1-1276fac1c6d2";
       fsType = "ext4";
     };
   };
+  hardware.enableAllFirmware = true;
+
   swapDevices = [ ];
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
