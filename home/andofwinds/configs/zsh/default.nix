@@ -8,7 +8,11 @@
 		oh-my-zsh = {
 			enable = true;
 			theme = "kanand";
-			custom = "$HOME/omz-custom";
+			custom = "${./.}";
+		};
+		shellAliases = {
+			"homesw" = "home-manager switch --flake ~/nix";
+			"sudonixsw" = "sudo nixos-rebuild switch --flake ~/nix";
 		};
 	};
 }
