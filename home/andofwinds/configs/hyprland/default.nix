@@ -3,9 +3,11 @@ let
 	terminal = "alacritty";
 	explorer = "nautilus";
 	browser  = "firefox";
+	telegram = "telegram-desktop";
 	audioStep = "2";
 	mute_vol = ./mute.sh;
 	micmute_vol = ./micmute.sh;
+	mk_screenshot = ./screenshot.sh;
 in {
 	wayland.windowManager.hyprland = {
 		enable = true;
@@ -70,6 +72,8 @@ in {
 				"$mod, Q, exec, ${terminal}"
 				"$mod, E, exec, ${explorer}"
 				"$mod, B, exec, ${browser}"
+				"$mod, T, exec, ${telegram}"
+				"$mod, P, exec, grim"
 				"$mod, M, exit"
 				"$mod, C, killactive"
 

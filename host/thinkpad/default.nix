@@ -8,6 +8,7 @@
 		../../mod/bluetooth.nix
 		../../mod/user.nix
 		../../mod/audio.nix
+		../../mod/xgnome.nix
 
 		./packages.nix
 	];

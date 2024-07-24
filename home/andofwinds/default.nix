@@ -28,7 +28,7 @@ programs.home-manager.enable = true;
 			unzip
 			swww
 			grim
-			fastfetch
+			slurp
     ];
   };
 }
