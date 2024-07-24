@@ -26,7 +26,7 @@
 			alsa-utils
 		];
 		programs.firefox.enable = true;
-		programs.hyprland.enable = true;
+#		programs.hyprland.enable = true;
 		fonts.packages = [
 			pkgs.nerdfonts
 		];

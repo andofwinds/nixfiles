@@ -6,7 +6,7 @@ programs.home-manager.enable = true;
   imports = [
 		(import ./configs { base16 = base16; })
   ];
-  home = {
+ home = {
     username = "andofwinds";
     homeDirectory = "/home/andofwinds";
     stateVersion = "24.11";
