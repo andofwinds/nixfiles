@@ -22,11 +22,10 @@
 			gtk3.dev
 			cmake
 			gnumake
-			neofetch
 			alsa-utils
 		];
 		programs.firefox.enable = true;
-#		programs.hyprland.enable = true;
+		programs.hyprland.enable = true;
 		fonts.packages = [
 			pkgs.nerdfonts
 		];

@@ -2,11 +2,11 @@
 let
 	base16 = import ./base16.nix;
 in {
-programs.home-manager.enable = true;
+	programs.home-manager.enable = true;
   imports = [
 		(import ./configs { base16 = base16; })
   ];
- home = {
+  home = {
     username = "andofwinds";
     homeDirectory = "/home/andofwinds";
     stateVersion = "24.11";
@@ -29,6 +29,7 @@ programs.home-manager.enable = true;
 			swww
 			grim
 			slurp
+			typescript
     ];
   };
 }
