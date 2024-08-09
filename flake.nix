@@ -24,6 +24,12 @@
 						./host/thinkpad/e14
 					];
 				};
+
+				T480s = lib.nixosSystem { inherit system;
+					modules = [
+						./host/thinkpad/t480s
+					];
+				};
 				
 				# RX580-based PcBuild
 				rx580 = lib.nixosSystem { inherit system;

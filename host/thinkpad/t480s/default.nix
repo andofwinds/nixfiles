@@ -2,10 +2,9 @@
 {
 	imports = [
 		../.
-
 		./hdw.nix
 		./packages.nix
 	];
 
-	networking.hostName = "E14";
+	networking.hostName = "T480s";
 }

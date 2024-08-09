@@ -10,7 +10,6 @@
 		../../mod/audio.nix
 		../../mod/xgnome.nix
 
-		./packages.nix
 		./nix-ld.nix
 	];
 }
