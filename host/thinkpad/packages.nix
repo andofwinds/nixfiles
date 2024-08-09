@@ -24,8 +24,11 @@
 			gnumake
 			alsa-utils
 		];
-		programs.firefox.enable = true;
-		programs.hyprland.enable = true;
+		programs = {
+			firefox.enable = true;
+			hyprland.enable = true;
+		};
+		services.flatpak.enable = true;
 		fonts.packages = [
 			pkgs.nerdfonts
 		];

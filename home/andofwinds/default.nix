@@ -16,10 +16,8 @@ in {
 			create-react-app
 			telegram-desktop
      	nodejs
-      rustup
 			vlc
  			cava
-			flatpak
 			ghex
 			arduino-ide
 			gnome-tweaks
@@ -30,6 +28,8 @@ in {
 			grim
 			slurp
 			typescript
+			qemu
+			rustup
     ];
   };
 }

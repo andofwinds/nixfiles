@@ -19,10 +19,9 @@
       pkgs = import nixpkgs { inherit system; };
     in {
       nixosConfigurations = {
-				# a config for my Thinkpads
-				thinkpad = lib.nixosSystem { inherit system;
+				E14 = lib.nixosSystem { inherit system;
 					modules = [
-						./host/thinkpad
+						./host/thinkpad/e14
 					];
 				};
 				

@@ -1,6 +1,5 @@
 { ... }:
 {
-#  sound.enable = true;
   services.pipewire = {
     enable = true;
     alsa = {
@@ -10,5 +9,5 @@
     pulse.enable = true;
   };
 
-  hardware.pulseaudio.enable = false;
+	hardware.pulseaudio.enable = false;
 }
