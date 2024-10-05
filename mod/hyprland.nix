@@ -1,8 +1,8 @@
-{ inputs, ... }:
+{ pkgs, ... }:
 {
-  inputs = [
-    inputs.home-manager-nixosModules.default
-  ];
+#  inputs = [
+#    inputs.home-manager-nixosModules.default
+#  ];
 
   programs.hyprland = {
     enable = true;

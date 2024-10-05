@@ -2,7 +2,7 @@
 let
 	terminal = "alacritty";
 	explorer = "nautilus";
-	browser  = "firefox";
+	browser  = "io.github.zen_browser.zen";
 	telegram = "telegram-desktop";
 	audioStep = "2";
 	mute_vol = ./mute.sh;
@@ -18,7 +18,7 @@ in {
 				",  1920x1080@60, 0x0, 1"
 			];
 
-			exec-once = "${./swww_run.sh}";
+			exec-once = "${./swww_run.sh} & fcitx5";
 
 			general = {
 				gaps_in = 3;
@@ -56,15 +56,17 @@ in {
 			};
 
 			input = {
-				kb_layout = "us,ru";
+				kb_layout = "us";
 				kb_variant = "";
-				kb_options = "grp:win_space_toggle";
+#				kb_options = "grp:win_space_toggle";
+				kb_options = "";
 				kb_rules = "";
-				kb_model = "";
+				kb_model = "pc104";
 
 				sensitivity = "0";
 
 				touchpad.natural_scroll = true;
+				touchpad.disable_while_typing = false;
 			};
 
 			"$mod" = "SUPER";
@@ -73,7 +75,7 @@ in {
 				"$mod, E, exec, ${explorer}"
 				"$mod, B, exec, ${browser}"
 				"$mod, T, exec, ${telegram}"
-				"$mod, P, exec, grim"
+				"$mod, P, exec, ${mk_screenshot}"
 				"$mod, M, exit"
 				"$mod, C, killactive"
 

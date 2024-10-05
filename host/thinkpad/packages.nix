@@ -15,7 +15,7 @@
 			pkg-config
 			nasm
 			xorg.libX11
-			adwaita-icon-theme
+			gnome.adwaita-icon-theme
 			zoxide
 			openssl
 			home-manager
@@ -23,12 +23,14 @@
 			cmake
 			gnumake
 			alsa-utils
+			glibc_multi
 		];
 		programs = {
 			firefox.enable = true;
 			hyprland.enable = true;
 		};
 		services.flatpak.enable = true;
+		services.xserver.exportConfiguration = true;
 		fonts.packages = [
 			pkgs.nerdfonts
 		];

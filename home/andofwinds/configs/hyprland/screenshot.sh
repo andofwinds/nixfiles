@@ -1,1 +1,1 @@
-grim -g "${slurp}"
+grim -g "${slurp}" -l 0
