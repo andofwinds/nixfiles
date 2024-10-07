@@ -11,6 +11,7 @@ let
 in {
 	wayland.windowManager.hyprland = {
 		enable = true;
+#		xwayland.enable = true;
 
 		settings = {
 			monitor = [
@@ -18,7 +19,7 @@ in {
 				",  1920x1080@60, 0x0, 1"
 			];
 
-			exec-once = "${./swww_run.sh} & fcitx5";
+			exec-once = "hyprctl setcursor Nordzy-cursors-lefthand 20 & ${./swww_run.sh} & fcitx5";
 
 			general = {
 				gaps_in = 3;

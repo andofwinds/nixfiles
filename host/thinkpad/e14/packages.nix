@@ -15,7 +15,6 @@
 			pkg-config
 			nasm
 			xorg.libX11
-			adwaita-icon-theme
 			zoxide
 			openssl
 			home-manager

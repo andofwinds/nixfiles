@@ -12,8 +12,8 @@
       ];
       kernelModules = [ ];
     };
-    kernelPackages = pkgs.linuxPackages_latest;
-    plymouth.enable = true;
+    kernelPackages = pkgs.linuxPackages_6_10;
+#    plymouth.enable = true;
   };
 
   fileSystems = {
