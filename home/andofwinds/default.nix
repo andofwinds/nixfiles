@@ -2,6 +2,7 @@
 let
 	base16 = import ./base16.nix;
 in {
+  nixpkgs.config.allowUnfree = true;
 	programs.home-manager.enable = true;
   imports = [
 		(import ./configs { base16 = base16; })
@@ -42,6 +43,9 @@ in {
 			glibc_multi
 			wineWowPackages.full
 			mc
+			zed-editor
+			nautilus
+			jetbrains.rust-rover
 
 #			-bios ${OVMF.fd}/FV/OVMF.fd 	\
 			(pkgs.writeShellScriptBin "qemu-system-x86_64-efi" ''

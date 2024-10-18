@@ -1,7 +1,7 @@
 { base16, ... }:
 let
 	terminal = "alacritty";
-	explorer = "nautilus";
+	editor = "zeditor";
 	browser  = "io.github.zen_browser.zen";
 	telegram = "telegram-desktop";
 	audioStep = "2";
@@ -11,7 +11,7 @@ let
 in {
 	wayland.windowManager.hyprland = {
 		enable = true;
-#		xwayland.enable = true;
+		xwayland.enable = true;
 
 		settings = {
 			monitor = [
@@ -73,7 +73,7 @@ in {
 			"$mod" = "SUPER";
 			bind = [
 				"$mod, Q, exec, ${terminal}"
-				"$mod, E, exec, ${explorer}"
+				"$mod, E, exec, ${editor}"
 				"$mod, B, exec, ${browser}"
 				"$mod, T, exec, ${telegram}"
 				"$mod, P, exec, ${mk_screenshot}"
