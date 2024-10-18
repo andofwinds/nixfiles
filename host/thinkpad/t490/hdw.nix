@@ -13,8 +13,7 @@
 
 			kernelModules = [ ];
 		};
-		kernelModules = [ "kvm-intel" ];
-		extraModulePackages = [ ];
+    kernelPackages = pkgs.linuxPackages_6_10;
 	};
 
 	fileSystems = {
@@ -28,6 +27,7 @@
 			fsType = "ext4";
 		};
 	};
+  hardware.enableAllFirmware = true;
 
 	swapDevices = [ ];
 
