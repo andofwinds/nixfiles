@@ -5,7 +5,7 @@
 		../.
 		../../mod/networking.nix
 		../../mod/user.nix
-		./nix-ld.nix
+		../nix-ld.nix
 
 		./hdw.nix
 	];
