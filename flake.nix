@@ -36,6 +36,13 @@
 						./host/thinkpad/t490
 					];
 				};
+
+				# Config for my server.
+				WSC = lib.nixosSystem { inherit system;
+					modules = [
+						./host/wsc
+					];
+				};
 				
 				# RX580-based PcBuild
 				rx580 = lib.nixosSystem { inherit system;
