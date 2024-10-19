@@ -11,6 +11,6 @@
 		../../mod/xserver.nix
 		../../mod/hyprland.nix
 
-		./nix-ld.nix
+		../nix-ld.nix
 	];
 }
