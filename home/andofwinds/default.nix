@@ -29,7 +29,6 @@ in {
 			vlc
  			cava
 			gnome.ghex
-			arduino-ide
 			gnome.gnome-tweaks
 			python3
 			wl-clipboard
@@ -45,7 +44,10 @@ in {
 			mc
 			zed-editor
 			nautilus
-			jetbrains.rust-rover
+			fritzing
+			steam
+			arduino
+
 
 #			-bios ${OVMF.fd}/FV/OVMF.fd 	\
 			(pkgs.writeShellScriptBin "qemu-system-x86_64-efi" ''

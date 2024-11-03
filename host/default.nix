@@ -34,4 +34,9 @@
 		fonts.packages = [
 			pkgs.nerdfonts
 		];
+		virtualisation.virtualbox.host.enable = true;
+
+		# Hardware settings for Steam.
+		hardware.graphics.enable32Bit = true;
+		hardware.pulseaudio.support32Bit = true;
 }

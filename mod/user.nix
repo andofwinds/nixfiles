@@ -8,6 +8,7 @@
 				"wheel"
 				"dialout"
 				"networkmanager"
+				"vboxusers"
 			];
 		};
 		defaultUserShell = pkgs.zsh;
