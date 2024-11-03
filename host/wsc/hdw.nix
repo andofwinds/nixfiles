@@ -25,6 +25,7 @@
 			fsType = "ext4";
 		};
 	};
+  hardware.enableAllFirmware = true;
 
 	swapDevices = [ ];
 
