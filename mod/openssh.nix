@@ -7,5 +7,5 @@
 			PasswordAuthentication = true;
 			AllowUsers = [ "andofwinds" "git" ];
 		};
-	}
+	};
 }
