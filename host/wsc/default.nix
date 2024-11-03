@@ -5,6 +5,7 @@
 		../.
 		../../mod/networking.nix
 		../../mod/user.nix
+		../../mod/openssh.nix
 		../nix-ld.nix
 
 		./hdw.nix
