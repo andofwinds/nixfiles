@@ -7,12 +7,13 @@
 		syntaxHighlighting.enable = true;
 		oh-my-zsh = {
 			enable = true;
-			theme = "kanand";
+			theme = "kanagawa";
 			custom = "${./.}";
 		};
 		shellAliases = {
-			"homesw" = "home-manager switch --flake ~/nix";
+			"homesw" 		= "home-manager switch --flake ~/nix";
 			"sudonixsw" = "sudo nixos-rebuild switch --flake ~/nix";
+			"clion" 		= "/home/andofwinds/bin/clion/bin/clion.sh";
 		};
 	};
 }

@@ -10,7 +10,5 @@
 		../../mod/audio.nix
 		../../mod/xserver.nix
 		../../mod/hyprland.nix
-
-		../nix-ld.nix
 	];
 }

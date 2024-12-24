@@ -1,5 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
+	imports = [
+		./systemd.nix
+		./nix-ld.nix
+	];
+
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowBroken = true;
 
@@ -15,7 +20,7 @@
 			pkg-config
 			nasm
 			xorg.libX11
-			gnome.adwaita-icon-theme
+			adwaita-icon-theme
 			zoxide
 			openssl
 			home-manager
@@ -23,17 +28,26 @@
 			cmake
 			gnumake
 			alsa-utils
-			glibc_multi
+			icu
+			glib
+			bison
+			flex
+			gmp
+			libmpc
+			mpfr
+			texinfo
+			isl
 		];
+
 		programs = {
 			firefox.enable = true;
 			hyprland.enable = true;
 		};
 		services.flatpak.enable = true;
 		services.xserver.exportConfiguration = true;
-		fonts.packages = [
-			pkgs.nerdfonts
-		];
+		fonts.packages = [ ]
+			++ builtins.filter
+					lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 		virtualisation.virtualbox.host.enable = true;
 
 		# Hardware settings for Steam.

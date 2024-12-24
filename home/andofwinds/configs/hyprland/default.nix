@@ -1,7 +1,10 @@
 { base16, ... }:
 let
 	terminal = "alacritty";
-	editor = "zeditor";
+	editor = "/home/andofwinds/bin/rustrover/bin/rustrover.sh";
+	editor2 = "/home/andofwinds/bin/clion/bin/clion.sh";
+	editor3 = "idea-community";
+	editor4 = "android-studio";
 	browser  = "io.github.zen_browser.zen";
 	telegram = "telegram-desktop";
 	audioStep = "2";
@@ -15,8 +18,10 @@ in {
 
 		settings = {
 			monitor = [
-				"eDP-1, 1920x1080@60, 0x1080, 1"
-				",  1920x1080@60, 0x0, 1"
+				"eDP-1, 1920x1080@60,    0x1080, 1"
+				"DP-5,  1920x1080@60,  960x0,    1"
+				"DP-6,  1920x1080@60, -960x0,    1"
+				",  		1920x1080@60, 	 0x0,    1"
 			];
 
 			exec-once = "hyprctl setcursor Nordzy-cursors-lefthand 20 & ${./swww_run.sh} & fcitx5";
@@ -24,7 +29,7 @@ in {
 			general = {
 				gaps_in = 3;
 				gaps_out = 30;
-				layout = "master";
+				layout = "dwindle";
 				allow_tearing = "false";
 				border_size = 0;
 
@@ -73,11 +78,14 @@ in {
 			"$mod" = "SUPER";
 			bind = [
 				"$mod, Q, exec, ${terminal}"
-				"$mod, E, exec, ${editor}"
-				"$mod, B, exec, ${browser}"
+				"$mod, E, exec, ${browser}"
 				"$mod, T, exec, ${telegram}"
-				"$mod, P, exec, ${mk_screenshot}"
-				"$mod, M, exit"
+				"$mod, P, exec, grim"
+				"$mod, V, exec, ${editor}"
+				"$mod, B, exec, ${editor2}"
+				"$mod, N, exec, ${editor3}"
+				"$mod, M, exec, ${editor4}"
+				"$mod, O, exit"
 				"$mod, C, killactive"
 
 				"$mod, D, pseudo"

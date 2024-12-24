@@ -12,7 +12,7 @@
       ];
       kernelModules = [ ];
     };
-    kernelPackages = pkgs.linuxPackages_6_10;
+    kernelPackages = pkgs.linuxPackages_6_11;
 #    plymouth.enable = true;
   };
 
