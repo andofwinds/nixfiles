@@ -7,6 +7,7 @@
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowBroken = true;
+	nixpkgs.config.android_sdk.accept_license = true;
 
   environment.systemPackages = 
 		with pkgs;
@@ -25,6 +26,7 @@
 			openssl
 			home-manager
 			gtk3.dev
+			gtk3
 			cmake
 			gnumake
 			alsa-utils
@@ -38,6 +40,17 @@
 			texinfo
 			isl
 		];
+
+		environment.variables = rec {
+			LD_LIBRARY_PATH = "${
+				with pkgs; lib.makeLibraryPath [
+					libGL
+					xorg.libX11
+					xorg.libXi
+					libxkbcommon
+				]
+			}";
+		};
 
 		programs = {
 			firefox.enable = true;

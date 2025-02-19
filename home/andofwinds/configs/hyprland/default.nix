@@ -50,7 +50,7 @@ in {
 
 			animations = {
 				enabled = true;
-				
+
 				bezier = "dbez, 0.02, 0.91, 0.26, 0.98";
 
 				animation = [
@@ -125,7 +125,7 @@ in {
 				", XF86AudioRaiseVolume, exec, amixer -q sset Master ${audioStep}%+"
 				", XF86MonBrightnessUp,   exec, brightnessctl set 5%+"
 				", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
-				
+
 			];
 			bindl = [
 				", XF86AudioMute, exec, ${mute_vol}"

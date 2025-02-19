@@ -15,27 +15,30 @@
 
 			font = {
 				normal = {
-					family = "JetBrainsMono Nerd Font";
+					family = "Cartograph CF";
 					style = "Normal";
 				};
 
 				italic = {
-					family = "JetBrainsMono Nerd Font";
+					family = "Cartograph CF";
 					style = "Italic";
 				};
 
 				bold = {
-					family = "JetBrainsMono Nerd Font";
+					family = "Cartograph CF";
 					style = "Bold";
 				};
 
-				size = 12.0;
+				size = 12.5;
+				offset = {
+					y = 2;
+				};
 			};
 
 			colors = {
 				primary = {
 					background = "${base16.base00}";
-					foreground = "${base16.base04}";
+					foreground = "${base16.base08}";
 				};
 				
 				cursor = {
@@ -46,7 +49,7 @@
 				normal = {
 					black = "${base16.base01}";
 					red = "${base16.base08}";
-					green = "${base16.base11}";
+					green = "${base16.green}";
 					yellow = "${base16.base09}";
 					blue = "${base16.base13}";
 					magenta = "${base16.base14}";
@@ -56,7 +59,7 @@
 				bright = {
 					black = "${base16.base02}";
 					red = "${base16.base15}";
-					green = "${base16.base11}";
+					green = "${base16.green}";
 					yellow = "${base16.base10}";
 					blue = "${base16.base13}";
 					magenta = "${base16.base06}";

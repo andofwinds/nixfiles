@@ -4,6 +4,10 @@
     networkmanager.enable = true;
     wireless.enable = false;
     useDHCP = lib.mkDefault true;
+		nameservers = [
+			"8.8.8.8"
+			"8.8.4.4"
+		];
     firewall = {
       enable = true;
       allowedTCPPorts = [ 80 443 8000 22 1080 ];
